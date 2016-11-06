@@ -12,7 +12,7 @@ $ bower install
 ```
 ## Then run
 ```bash
-$ node server.js
+$ npm start
 ```
 ## Demo
 ![image](https://github.com/NG-MBTA/ng2-display-board/blob/master/public/assets/images/demo.JPG)
