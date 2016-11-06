@@ -15,7 +15,7 @@ $ bower install
 $ node server.js
 ```
 ## Demo
-https://github.com/NG-MBTA/ng2-display-board/blob/master/public/assets/images/demo.JPG
+![image](https://github.com/NG-MBTA/ng2-display-board/blob/master/public/assets/images/demo.JPG)
 
 ### Tools
 
