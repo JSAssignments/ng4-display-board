@@ -540,7 +540,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppDataService = (function () {
     function AppDataService(http) {
         this.http = http;
-        this.debug = false;
+        this.debug = true;
         this.schedules$ = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["Subject"]();
     }
     AppDataService.prototype.initSchedules = function () {
