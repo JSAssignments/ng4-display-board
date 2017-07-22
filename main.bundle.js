@@ -546,7 +546,7 @@ var AppDataService = (function () {
     AppDataService.prototype.initSchedules = function () {
         var self = this;
         this.url = (!this.debug)
-            ? 'http://developer.mbta.com/lib/gtrtfs/Departures.csv'
+            ? 'https://developer.mbta.com/lib/gtrtfs/Departures.csv'
             : './assets/data/departures.csv';
         __WEBPACK_IMPORTED_MODULE_0_d3__["csv"](this.url, function (result) {
             self.schedules$.next(result);
