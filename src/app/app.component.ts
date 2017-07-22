@@ -1,12 +1,17 @@
+import * as moment from 'moment';
+import { Schedule } from './app.schedule';
 import { Component, OnInit } from '@angular/core';
-import { Schedule }          from './app.schedule';
-import { AppDataService }    from './app-data.service';
-import { TranslateService }  from 'ng2-translate';
-import * as moment           from 'moment';
+import { AppDataService } from './app-data.service';
+import { TranslateService } from '@ngx-translate/core';
 
+
+/**
+ * @author: Shoukath Mohammed
+ */
 @Component({
-	selector: 'app',
-    templateUrl: './app/app.component.html'
+	selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 
 
@@ -27,8 +32,15 @@ export class AppComponent implements OnInit {
         translate.use('en');
    }
 
-   ngOnInit(){
-   	 this.appDataService.getSchedules.apply(this, [arguments]);
+   ngOnInit(): void {
+   	 this.appDataService.getSchedules().subscribe(
+        results => {
+          this.schedules = results;
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
    	 this.getCurrentDateTime();
    }
 

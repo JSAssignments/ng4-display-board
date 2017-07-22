@@ -1,4 +1,7 @@
-export class Schedule {
+/**
+ * @author: Shoukath Mohammed
+ */
+export interface Schedule {
   TimeStamp: number;
   Destination: string;
   Trip: number;
